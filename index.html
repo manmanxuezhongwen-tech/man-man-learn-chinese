@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#dff3ff">
+<meta name="description" content="Man Man Learn Chinese — belajar Mandarin pelan-pelan, setiap hari.">
+<title>Man Man Learn Chinese 慢慢学中文</title>
+<style>
+:root{--blue:#bde6fb;--blue2:#eaf7ff;--navy:#23465c;--pink:#ffe1ed;--mint:#dff7ee;--cream:#fffdf8;--ink:#294455;--muted:#718695;--line:#e3edf2;--shadow:0 12px 30px rgba(45,93,120,.09)}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#effaff 0,#fffdf8 55%);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)}button{font:inherit;cursor:pointer;border:0}button:focus-visible{outline:3px solid #69b9e8;outline-offset:3px}.app{max-width:760px;margin:auto;min-height:100vh;padding:18px 16px 100px}.top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:20px}.brand{display:flex;align-items:center;gap:10px}.logo{width:48px;height:48px;border-radius:17px;background:#fff;display:grid;place-items:center;box-shadow:var(--shadow);font-size:25px}.brand h1{font-size:17px;line-height:1.2;margin:0}.brand small{font-size:12px;color:var(--muted)}.streak{background:#fff;border-radius:18px;padding:9px 12px;font-weight:700;font-size:13px;box-shadow:var(--shadow)}.hero{background:linear-gradient(135deg,#c7eaff,#e7f6ff 60%,#ffe7f0);border-radius:28px;padding:25px 22px;position:relative;overflow:hidden;box-shadow:var(--shadow)}.hero:after{content:"慢";position:absolute;right:12px;bottom:-40px;font-size:150px;font-weight:900;color:#fff;opacity:.45;pointer-events:none}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.08em;color:#44718c;text-transform:uppercase}.hero h2{font-size:29px;line-height:1.15;margin:10px 0 8px;max-width:400px}.hero p{margin:0 0 18px;max-width:340px;color:#4d6b7c;line-height:1.5}.primary{background:var(--navy);color:white;border-radius:15px;padding:12px 18px;font-weight:750;box-shadow:0 6px 15px #23465c25}.section-head{display:flex;align-items:center;justify-content:space-between;margin:25px 2px 12px}.section-head h3{margin:0;font-size:18px}.section-head span{font-size:12px;color:var(--muted)}.daily{background:white;border:1px solid var(--line);border-radius:22px;padding:17px;display:flex;align-items:center;gap:15px;box-shadow:var(--shadow)}.hanzi{font-size:34px;font-weight:800;line-height:1}.daily .meaning{flex:1}.daily .meaning b{display:block;font-size:16px}.daily .meaning small{color:var(--muted)}.round{width:42px;height:42px;border-radius:14px;background:var(--blue2);color:var(--navy);font-size:20px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.lesson{background:#fff;border:1px solid var(--line);border-radius:21px;padding:16px;text-align:left;box-shadow:var(--shadow);min-height:138px;transition:transform .15s}.lesson:active{transform:scale(.98)}.lesson .emoji{font-size:25px}.lesson b{display:block;margin:9px 0 3px;font-size:15px}.lesson small{color:var(--muted)}.progressbox{background:white;border:1px solid var(--line);border-radius:21px;padding:17px;box-shadow:var(--shadow)}.bar{height:9px;background:#edf4f7;border-radius:10px;overflow:hidden;margin:12px 0 7px}.bar span{display:block;height:100%;background:linear-gradient(90deg,#8fd2f6,#f5b9d5);width:0%;border-radius:10px}.bottom{position:fixed;bottom:0;left:0;right:0;background:#ffffffed;backdrop-filter:blur(12px);border-top:1px solid var(--line);display:flex;justify-content:center;gap:clamp(12px,6vw,48px);padding:10px 12px calc(10px + env(safe-area-inset-bottom));z-index:10}.navbtn{background:transparent;color:#7b909c;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;min-width:55px}.navbtn span{font-size:21px}.navbtn.active{color:#2b719a;font-weight:800}.screen{display:none}.screen.active{display:block}.backrow{display:flex;align-items:center;gap:10px;margin:8px 0 18px}.back{background:white;border:1px solid var(--line);border-radius:12px;padding:9px 12px}.screen-title{margin:0;font-size:24px}.sub{color:var(--muted);margin:6px 0 18px}.wordlist{display:grid;gap:10px}.word{background:white;border:1px solid var(--line);border-radius:18px;padding:15px;display:flex;align-items:center;gap:13px}.word .hanzi{min-width:65px}.word .info{flex:1}.word .info b{display:block}.word .info small{color:var(--muted)}.tag{font-size:11px;background:var(--mint);padding:5px 8px;border-radius:10px;color:#39725e}.actionrow{display:flex;gap:10px;margin-top:18px}.actionrow button{flex:1}.soft{background:#eaf7ff;color:var(--navy);border-radius:15px;padding:12px;font-weight:750}.flashcard{background:linear-gradient(145deg,#fff,#eaf7ff);border:1px solid var(--line);border-radius:28px;min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:var(--shadow);padding:25px;text-align:center}.flashcard .big{font-size:64px;font-weight:850}.flashcard .py{font-size:19px;color:#4f7c95;margin:8px}.flashcard .translation{font-size:18px;font-weight:700;margin-top:12px}.quizcard{background:white;border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:var(--shadow)}.question{font-size:34px;font-weight:850;text-align:center;margin:18px 0}.answers{display:grid;gap:10px}.answer{background:#f4faff;border:1px solid #dcecf5;border-radius:15px;padding:14px;text-align:left;font-weight:650;color:var(--ink)}.answer.correct{background:#e1f7ed;border-color:#81cdaa}.answer.wrong{background:#fff0f3;border-color:#efadc2}.feedback{min-height:26px;margin-top:12px;font-weight:750;text-align:center}.hidden{display:none!important}.note{font-size:12px;color:var(--muted);text-align:center;margin:22px 0}.toast{position:fixed;left:50%;bottom:85px;transform:translateX(-50%);background:#294455;color:#fff;padding:11px 17px;border-radius:14px;box-shadow:var(--shadow);z-index:20;font-size:13px;white-space:nowrap}
+@media(min-width:600px){.app{padding-top:28px}.hero{padding:32px}.hero h2{font-size:34px}.grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+ <div class="brand"><div class="logo">🐼</div><div><h1>Man Man Learn Chinese</h1><small>慢慢学中文 · pelan-pelan belajar</small></div></div>
+ <div class="streak">⭐ <span id="scoreTop">0</span> XP</div>
+</header>
+
+<main>
+<section id="home" class="screen active">
+ <div class="hero">
+  <div class="eyebrow">你的中文小旅程 · Your little journey</div>
+  <h2>Belajar Mandarin,<br>pelan-pelan aja ♡</h2>
+  <p>Mulai dari satu kata hari ini. Sedikit demi sedikit, kamu pasti bisa!</p>
+  <button class="primary" onclick="openLesson('greetings')">Mulai belajar →</button>
+ </div>
+ <div class="section-head"><h3>✨ Kata hari ini</h3><span>Daily word</span></div>
+ <div class="daily"><div class="hanzi">慢慢</div><div class="meaning"><b>màn màn</b><small>pelan-pelan · slowly</small></div><button class="round" onclick="speak('慢慢')">🔊</button></div>
+ <div class="section-head"><h3>📚 Pilih pelajaran</h3><span>Beginner · Pemula</span></div>
+ <div class="grid">
+  <button class="lesson" onclick="openLesson('greetings')"><span class="emoji">👋</span><b>Salam & sapaan</b><small>问候 · Greetings</small></button>
+  <button class="lesson" onclick="openLesson('family')"><span class="emoji">👨‍👩‍👧</span><b>Anggota keluarga</b><small>家庭成员 · Family</small></button>
+  <button class="lesson" onclick="openLesson('numbers')"><span class="emoji">🔢</span><b>Angka 1–10</b><small>数字 · Numbers</small></button>
+  <button class="lesson" onclick="openLesson('daily')"><span class="emoji">☀️</span><b>Kata sehari-hari</b><small>日常用语 · Daily words</small></button>
+  <button class="lesson" onclick="openLesson('hsk1')"><span class="emoji">🎓</span><b>HSK 1 · Kosakata inti</b><small>154 kata · 汉语水平考试</small></button><button class="lesson" onclick="startQuiz()"><span class="emoji">🎮</span><b>Kuis cepat</b><small>小测验 · Quick quiz</small></button>
+  <button class="lesson" onclick="showScreen('progress')"><span class="emoji">🌷</span><b>Perjalanan belajar</b><small>学习进度 · Your progress</small></button>
+ </div>
+ <div class="section-head"><h3>🌱 Progress kamu</h3><span id="progressLabel">0% selesai</span></div>
+ <div class="progressbox"><b id="progressWords">0 kata dipelajari</b><div class="bar"><span id="progressBar"></span></div><small style="color:var(--muted)">Terus belajar sedikit demi sedikit!</small></div>
+ <p class="note">Made with ♡ for Mandarin beginners · Audio memakai fitur suara di browser/HP</p>
+</section>
+
+<section id="lesson" class="screen">
+ <div class="backrow"><button class="back" onclick="showScreen('home')">← Kembali</button></div>
+ <h2 class="screen-title" id="lessonTitle">Pelajaran</h2><p class="sub" id="lessonSub"></p>
+ <div id="words" class="wordlist"></div>
+ <div class="actionrow"><button class="soft" onclick="startFlashcards()">🃏 Kartu belajar</button><button class="primary" onclick="startQuiz()">🎮 Kuis</button></div>
+</section>
+
+<section id="flash" class="screen">
+ <div class="backrow"><button class="back" onclick="showScreen('lesson')">← Pelajaran</button></div>
+ <p class="sub" id="flashCount" style="text-align:center">Kartu 1</p>
+ <div class="flashcard" onclick="flipCard()"><div class="big" id="flashHanzi">你好</div><div class="py" id="flashPinyin">nǐ hǎo</div><div class="translation hidden" id="flashMeaning">Halo</div><small style="margin-top:22px;color:#8ba1ad">Tap kartu untuk melihat arti</small></div>
+ <div class="actionrow"><button class="soft" onclick="prevCard()">← Sebelumnya</button><button class="primary" onclick="nextCard()">Berikutnya →</button></div>
+</section>
+
+<section id="quiz" class="screen">
+ <div class="backrow"><button class="back" onclick="showScreen('home')">✕ Keluar kuis</button></div>
+ <p class="sub" id="quizCount">Pertanyaan 1</p>
+ <div class="quizcard"><div class="eyebrow" style="text-align:center">Pilih arti yang benar</div><div class="question" id="quizWord">你好</div><div class="answers" id="answers"></div><div class="feedback" id="feedback"></div></div>
+ <div class="actionrow"><button class="primary hidden" id="nextQuestion" onclick="nextQuestion()">Lanjut →</button></div>
+</section>
+
+<section id="progress" class="screen">
+ <div class="backrow"><button class="back" onclick="showScreen('home')">← Beranda</button></div>
+ <h2 class="screen-title">Perjalanan belajar 🌷</h2><p class="sub">Setiap kata yang kamu pelajari adalah kemajuan.</p>
+ <div class="progressbox"><div style="font-size:35px;font-weight:850" id="totalXP">0 XP</div><b>Total pengalaman</b><div class="bar"><span id="progressBar2"></span></div><p id="progressDetail" style="color:var(--muted)">Ayo mulai belajar!</p></div>
+ <div class="section-head"><h3>Kata yang sudah dipelajari</h3></div><div id="learnedList" class="wordlist"></div>
+ <p class="note">Progress tersimpan di perangkat ini.</p>
+</section>
+</main>
+</div>
+<nav class="bottom">
+ <button class="navbtn active" data-screen="home" onclick="showScreen('home')"><span>🏠</span>Beranda</button>
+ <button class="navbtn" data-screen="lesson" onclick="openLesson('greetings')"><span>📖</span>Belajar</button>
+ <button class="navbtn" data-screen="quiz" onclick="startQuiz()"><span>🎮</span>Kuis</button>
+ <button class="navbtn" data-screen="progress" onclick="showScreen('progress')"><span>🌱</span>Progress</button>
+</nav>
+<script>
+const lessons={
+ greetings:{title:"Salam & sapaan",sub:"问候 · Greetings",words:[
+ ["你好","nǐ hǎo","Halo"],["早上好","zǎo shang hǎo","Selamat pagi"],["晚上好","wǎn shang hǎo","Selamat malam"],["谢谢","xiè xie","Terima kasih"],["不客气","bú kè qi","Sama-sama"],["再见","zài jiàn","Sampai jumpa"],["对不起","duì bu qǐ","Maaf"],["没关系","méi guān xi","Tidak apa-apa"]]},
+ family:{title:"Anggota keluarga",sub:"家庭成员 · Family members",words:[
+ ["妈妈","māma","Mama"],["爸爸","bàba","Papa"],["哥哥","gēge","Kakak laki-laki"],["姐姐","jiějie","Kakak perempuan"],["弟弟","dìdi","Adik laki-laki"],["妹妹","mèimei","Adik perempuan"],["老公","lǎogōng","Suami"],["老婆","lǎopó","Istri"],["孩子","háizi","Anak"],["家人","jiārén","Keluarga"]]},
+ numbers:{title:"Angka 1–10",sub:"数字 · Numbers",words:[
+ ["一","yī","Satu"],["二","èr","Dua"],["三","sān","Tiga"],["四","sì","Empat"],["五","wǔ","Lima"],["六","liù","Enam"],["七","qī","Tujuh"],["八","bā","Delapan"],["九","jiǔ","Sembilan"],["十","shí","Sepuluh"]]},
+ daily:{title:"Kata sehari-hari",sub:"日常用语 · Daily words",words:[
+ ["我","wǒ","Saya / aku"],["你","nǐ","Kamu"],["喜欢","xǐhuan","Suka"],["学习","xuéxí","Belajar"],["中文","Zhōngwén","Bahasa Mandarin"],["很好","hěn hǎo","Sangat baik"],["可以","kěyǐ","Boleh / bisa"],["不要","bú yào","Jangan / tidak mau"]]}
+};
+// HSK 1 launch module — curated beginner vocabulary with Indonesian meanings.
+lessons.hsk1={title:"HSK 1 · Kosakata inti",sub:"HSK 1 beginner vocabulary · Hanzi + pinyin + Bahasa Indonesia",words:[["爱","ài","cinta; suka"],["八","bā","delapan"],["爸爸","bàba","ayah; papa"],["杯子","bēizi","gelas"],["北京","Běijīng","Beijing"],["本","běn","kata ukur buku"],["不客气","bú kèqi","sama-sama"],["不","bù","tidak"],["菜","cài","sayur; hidangan"],["茶","chá","teh"],["吃","chī","makan"],["出租车","chūzūchē","taksi"],["打电话","dǎ diànhuà","menelepon"],["大","dà","besar"],["的","de","partikel kepemilikan"],["点","diǎn","jam; titik"],["电脑","diànnǎo","komputer"],["电视","diànshì","televisi"],["电影","diànyǐng","film"],["东西","dōngxi","barang; benda"],["都","dōu","semua"],["读","dú","membaca"],["对不起","duìbuqǐ","maaf"],["多","duō","banyak"],["多少","duōshao","berapa"],["儿子","érzi","anak laki-laki"],["二","èr","dua"],["饭店","fàndiàn","restoran"],["飞机","fēijī","pesawat"],["分钟","fēnzhōng","menit"],["高兴","gāoxìng","senang"],["个","gè","kata ukur umum"],["工作","gōngzuò","bekerja; pekerjaan"],["狗","gǒu","anjing"],["汉语","Hànyǔ","bahasa Mandarin"],["好","hǎo","baik; bagus"],["号","hào","tanggal; nomor"],["喝","hē","minum"],["和","hé","dan"],["很","hěn","sangat"],["后面","hòumiàn","belakang"],["回","huí","kembali"],["会","huì","bisa; akan"],["火车","huǒchē","kereta api"],["机场","jīchǎng","bandara"],["鸡蛋","jīdàn","telur"],["几","jǐ","berapa; beberapa"],["家","jiā","rumah; keluarga"],["叫","jiào","bernama; memanggil"],["今天","jīntiān","hari ini"],["九","jiǔ","sembilan"],["开","kāi","membuka; menyalakan"],["看","kàn","melihat; membaca"],["看见","kànjiàn","melihat"],["块","kuài","yuan; potong"],["来","lái","datang"],["老师","lǎoshī","guru"],["了","le","partikel perubahan/aspek"],["冷","lěng","dingin"],["里","lǐ","di dalam"],["六","liù","enam"],["妈妈","māma","ibu; mama"],["吗","ma","partikel pertanyaan"],["买","mǎi","membeli"],["猫","māo","kucing"],["没关系","méi guānxi","tidak apa-apa"],["没有","méiyǒu","tidak ada; belum punya"],["米饭","mǐfàn","nasi"],["明天","míngtiān","besok"],["名字","míngzi","nama"],["哪","nǎ","yang mana"],["哪儿","nǎr","di mana"],["那","nà","itu"],["那儿","nàr","di sana"],["呢","ne","partikel tanya/penegas"],["能","néng","bisa; mampu"],["你","nǐ","kamu"],["年","nián","tahun"],["女儿","nǚ'ér","anak perempuan"],["朋友","péngyou","teman"],["漂亮","piàoliang","cantik; indah"],["苹果","píngguǒ","apel"],["七","qī","tujuh"],["钱","qián","uang"],["前面","qiánmiàn","depan"],["请","qǐng","silakan; tolong"],["去","qù","pergi"],["热","rè","panas"],["人","rén","orang"],["认识","rènshi","mengenal"],["三","sān","tiga"],["商店","shāngdiàn","toko"],["上","shàng","atas; naik"],["上午","shàngwǔ","pagi"],["少","shǎo","sedikit"],["谁","shéi","siapa"],["什么","shénme","apa"],["十","shí","sepuluh"],["时候","shíhou","waktu; saat"],["是","shì","adalah"],["书","shū","buku"],["水","shuǐ","air"],["水果","shuǐguǒ","buah"],["睡觉","shuìjiào","tidur"],["说话","shuōhuà","berbicara"],["四","sì","empat"],["岁","suì","tahun usia"],["他","tā","dia (laki-laki)"],["她","tā","dia (perempuan)"],["太","tài","terlalu; sangat"],["天气","tiānqì","cuaca"],["听","tīng","mendengar"],["同学","tóngxué","teman sekelas"],["喂","wèi","halo (telepon)"],["我","wǒ","saya; aku"],["我们","wǒmen","kami; kita"],["五","wǔ","lima"],["喜欢","xǐhuan","suka"],["下","xià","bawah; turun"],["下午","xiàwǔ","siang; sore"],["下雨","xiàyǔ","hujan"],["先生","xiānsheng","Tuan; Bapak"],["现在","xiànzài","sekarang"],["想","xiǎng","ingin; berpikir; rindu"],["小","xiǎo","kecil"],["小姐","xiǎojiě","Nona; Mbak"],["些","xiē","beberapa"],["写","xiě","menulis"],["谢谢","xièxie","terima kasih"],["星期","xīngqī","minggu; hari dalam minggu"],["学生","xuésheng","murid; siswa"],["学习","xuéxí","belajar"],["学校","xuéxiào","sekolah"],["一","yī","satu"],["衣服","yīfu","pakaian"],["医生","yīshēng","dokter"],["医院","yīyuàn","rumah sakit"],["椅子","yǐzi","kursi"],["有","yǒu","punya; ada"],["月","yuè","bulan"],["再见","zàijiàn","sampai jumpa"],["在","zài","berada di; sedang"],["怎么","zěnme","bagaimana"],["怎么样","zěnmeyàng","bagaimana; seperti apa"],["这","zhè","ini"],["这儿","zhèr","di sini"],["中国","Zhōngguó","Tiongkok; China"],["中午","zhōngwǔ","tengah hari"],["住","zhù","tinggal"],["桌子","zhuōzi","meja"],["字","zì","karakter; huruf"],["昨天","zuótiān","kemarin"],["做","zuò","melakukan; membuat"],["坐","zuò","duduk; naik kendaraan"]]};
+
+let currentLesson="greetings",cardIndex=0,quizItems=[],quizIndex=0,quizScore=0,answered=false;
+let state=JSON.parse(localStorage.getItem("manmanState")||'{"xp":0,"learned":[]}');
+function save(){localStorage.setItem("manmanState",JSON.stringify(state));updateProgress()}
+function showScreen(id){document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));document.getElementById(id).classList.add("active");document.querySelectorAll(".navbtn").forEach(b=>b.classList.toggle("active",b.dataset.screen===id));if(id==="progress")renderProgress();window.scrollTo({top:0,behavior:"smooth"})}
+function openLesson(id){currentLesson=id;const l=lessons[id];document.getElementById("lessonTitle").textContent=l.title;document.getElementById("lessonSub").textContent=l.sub;document.getElementById("words").innerHTML=l.words.map((w,i)=>`<div class="word"><div class="hanzi">${w[0]}</div><div class="info"><b>${w[1]}</b><small>${w[2]}</small></div><button class="round" onclick="speak('${w[0]}')">🔊</button></div>`).join("");showScreen("lesson")}
+function speak(text){
+  if(!window.speechSynthesis || !window.SpeechSynthesisUtterance){
+    toast("Fitur suara tidak didukung browser ini. Coba Chrome terbaru.");
+    return;
+  }
+  const synth = window.speechSynthesis;
+  try {
+    synth.cancel();
+    const utterance = new SpeechSynthesisUtterance(String(text));
+    utterance.lang = "zh-CN";
+    utterance.rate = 0.72;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+    const voices = synth.getVoices ? synth.getVoices() : [];
+    const voice = voices.find(v => /zh[-_]?(cn|hans)/i.test(v.lang))
+      || voices.find(v => /^zh[-_]/i.test(v.lang));
+    if(voice) {
+      utterance.voice = voice;
+      utterance.lang = voice.lang || "zh-CN";
+    }
+    utterance.onerror = (event) => {
+      // Android browsers may report "interrupted"/"canceled" even when audio played.
+      // Treat those as harmless; show a warning only for a genuine playback failure.
+      if(event.error === "interrupted" || event.error === "canceled") return;
+      toast("Audio gagal diputar. Coba tekan speaker sekali lagi atau buka di Chrome.");
+    };
+    synth.resume();
+    setTimeout(() => {
+      try { synth.speak(utterance); }
+      catch(e) { toast("Tidak bisa memutar suara. Coba buka file di Chrome."); }
+    }, 120);
+  } catch(e) {
+    toast("Fitur suara belum siap. Coba tutup lalu buka ulang aplikasi.");
+  }
+}
+function startFlashcards(){cardIndex=0;showCard();showScreen("flash")}
+function showCard(){let w=lessons[currentLesson].words[cardIndex];document.getElementById("flashHanzi").textContent=w[0];document.getElementById("flashPinyin").textContent=w[1];document.getElementById("flashMeaning").textContent=w[2];document.getElementById("flashMeaning").classList.add("hidden");document.getElementById("flashCount").textContent=`Kartu ${cardIndex+1} dari ${lessons[currentLesson].words.length}`}
+function flipCard(){document.getElementById("flashMeaning").classList.toggle("hidden");let w=lessons[currentLesson].words[cardIndex];if(!state.learned.includes(w[0])){state.learned.push(w[0]);save()}}
+function nextCard(){cardIndex=(cardIndex+1)%lessons[currentLesson].words.length;showCard()}
+function prevCard(){cardIndex=(cardIndex-1+lessons[currentLesson].words.length)%lessons[currentLesson].words.length;showCard()}
+function allWords(){
+  const unique = new Map();
+  Object.values(lessons).flatMap(l=>l.words).forEach(w=>{if(!unique.has(w[0])) unique.set(w[0],w)});
+  return Array.from(unique.values());
+}
+function startQuiz(){quizItems=allWords().sort(()=>Math.random()-.5).slice(0,8);quizIndex=0;quizScore=0;renderQuestion();showScreen("quiz")}
+function renderQuestion(){answered=false;let w=quizItems[quizIndex];document.getElementById("quizCount").textContent=`Pertanyaan ${quizIndex+1} dari ${quizItems.length}`;document.getElementById("quizWord").textContent=w[0];document.getElementById("feedback").textContent="";document.getElementById("nextQuestion").classList.add("hidden");let choices=[w[2]];let pool=allWords().filter(x=>x[2]!==w[2]);while(choices.length<4){let a=pool[Math.floor(Math.random()*pool.length)][2];if(!choices.includes(a))choices.push(a)}choices.sort(()=>Math.random()-.5);document.getElementById("answers").innerHTML=choices.map(a=>`<button class="answer" onclick="chooseAnswer(this,'${a.replace(/'/g,"\\'")}','${w[2].replace(/'/g,"\\'")}')">${a}</button>`).join("")}
+function chooseAnswer(btn,choice,correct){if(answered)return;answered=true;document.querySelectorAll(".answer").forEach(b=>{b.disabled=true;if(b.textContent===correct)b.classList.add("correct")});let w=quizItems[quizIndex];if(choice===correct){quizScore++;state.xp+=10;if(!state.learned.includes(w[0]))state.learned.push(w[0]);document.getElementById("feedback").textContent="Benar! 太棒了！ +10 XP";}else{btn.classList.add("wrong");document.getElementById("feedback").textContent="Belum tepat. Jawabannya: "+correct}save();document.getElementById("nextQuestion").classList.remove("hidden");document.getElementById("nextQuestion").textContent=quizIndex===quizItems.length-1?"Lihat hasil ✨":"Lanjut →"}
+function nextQuestion(){if(quizIndex<quizItems.length-1){quizIndex++;renderQuestion()}else{document.getElementById("quizWord").textContent=`${quizScore} / ${quizItems.length}`;document.getElementById("answers").innerHTML="<p style='text-align:center'>Kamu sudah berusaha dengan baik! Terus belajar pelan-pelan. 🌷</p>";document.getElementById("feedback").textContent="Kuis selesai · "+(quizScore*10)+" XP didapat";document.getElementById("nextQuestion").classList.add("hidden")}}
+function updateProgress(){document.getElementById("scoreTop").textContent=state.xp;let total=allWords().length,learned=state.learned.length,p=Math.round(learned/total*100);document.getElementById("progressWords").textContent=`${learned} dari ${total} kata dipelajari`;document.getElementById("progressLabel").textContent=p+"% selesai";document.getElementById("progressBar").style.width=p+"%";document.getElementById("progressBar2").style.width=p+"%"}
+function renderProgress(){document.getElementById("totalXP").textContent=state.xp+" XP";document.getElementById("progressDetail").textContent=`Kamu sudah mengenal ${state.learned.length} kata dari ${allWords().length} kata di aplikasi.`;let words=allWords().filter(w=>state.learned.includes(w[0]));document.getElementById("learnedList").innerHTML=words.length?words.map(w=>`<div class="word"><div class="hanzi">${w[0]}</div><div class="info"><b>${w[1]}</b><small>${w[2]}</small></div></div>`).join(""):"<p class='sub'>Belum ada kata yang ditandai. Mulai dari pelajaran pertama, ya!</p>"}
+function toast(msg){let t=document.createElement("div");t.className="toast";t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),2200)}
+updateProgress();
+</script>
+</body>
+</html>
