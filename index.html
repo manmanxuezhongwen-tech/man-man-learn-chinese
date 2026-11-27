@@ -28,7 +28,14 @@
   <button class="primary" onclick="openLesson('greetings')">Mulai belajar →</button>
  </div>
  <div class="section-head"><h3>✨ Kata hari ini</h3><span>Daily word</span></div>
- <div class="daily"><div class="hanzi">慢慢</div><div class="meaning"><b>màn màn</b><small>pelan-pelan · slowly</small></div><button class="round" onclick="speak('慢慢')">🔊</button></div>
+<div class="daily" id="dailyWord">
+  <div class="hanzi">慢慢</div>
+  <div class="meaning">
+    <b>màn màn</b>
+    <small>pelan-pelan · slowly</small>
+  </div>
+  <button class="round" onclick="speak('慢慢')">🔊</button>
+</div>
  <div class="section-head"><h3>📚 Pilih pelajaran</h3><span>Beginner · Pemula</span></div>
  <div class="grid">
   <button class="lesson" onclick="openLesson('greetings')"><span class="emoji">👋</span><b>Salam & sapaan</b><small>问候 · Greetings</small></button>
@@ -152,5 +159,67 @@ function renderProgress(){document.getElementById("totalXP").textContent=state.x
 function toast(msg){let t=document.createElement("div");t.className="toast";t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),2200)}
 updateProgress();
 </script>
+ <script>
+const dailyWords = [
+  {
+    hanzi: "慢慢",
+    pinyin: "màn màn",
+    meaning: "pelan-pelan · slowly"
+  },
+  {
+    hanzi: "学习",
+    pinyin: "xuéxí",
+    meaning: "belajar · to learn"
+  },
+  {
+    hanzi: "朋友",
+    pinyin: "péngyou",
+    meaning: "teman · friend"
+  },
+  {
+    hanzi: "开心",
+    pinyin: "kāixīn",
+    meaning: "senang · happy"
+  },
+  {
+    hanzi: "谢谢",
+    pinyin: "xièxie",
+    meaning: "terima kasih · thank you"
+  },
+  {
+    hanzi: "喜欢",
+    pinyin: "xǐhuan",
+    meaning: "suka · to like"
+  },
+  {
+    hanzi: "今天",
+    pinyin: "jīntiān",
+    meaning: "hari ini · today"
+  }
+];
+
+const today = new Date();
+
+const dayNumber = Math.floor(
+  Date.UTC(
+    today.getFullYear(),
+    today.getMonth(),
+    today.getDate()
+  ) / 86400000
+);
+
+const wordIndex = dayNumber % dailyWords.length;
+const word = dailyWords[wordIndex];
+
+const dailyWord = document.getElementById("dailyWord");
+
+dailyWord.querySelector(".hanzi").textContent = word.hanzi;
+dailyWord.querySelector(".meaning b").textContent = word.pinyin;
+dailyWord.querySelector(".meaning small").textContent = word.meaning;
+
+dailyWord.querySelector("button").onclick = function() {
+  speak(word.hanzi);
+};
+ </script>
 </body>
 </html>
